@@ -4,24 +4,24 @@ metadata:
   annotations:
     app.openshift.io/vcs-uri: https://github.com/rampadc/express-sample-app
   labels:
-    app: express-sample-app
-    app.kubernetes.io/instance: express-sample-app
-    app.kubernetes.io/name: express-sample-app
+    app: sreevani-r-pipeline-from-scratch-pipeline
+    app.kubernetes.io/instance: sreevani-r-pipeline-from-scratch-pipeline
+    app.kubernetes.io/name: sreevani-r-pipeline-from-scratch-pipeline
     app.openshift.io/runtime: js
-  name: express-sample-app
+  name: sreevani-r-pipeline-from-scratch-pipeline
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app.kubernetes.io/instance: express-sample-app
-      app.kubernetes.io/name: express-sample-app
+      app.kubernetes.io/instance: sreevani-r-pipeline-from-scratch-pipeline
+      app.kubernetes.io/name: sreevani-r-pipeline-from-scratch-pipeline
   template:
     metadata:
       labels:
-        app.kubernetes.io/instance: express-sample-app
-        app.kubernetes.io/name: express-sample-app
+        app.kubernetes.io/instance: sreevani-r-pipeline-from-scratch-pipeline
+        app.kubernetes.io/name: sreevani-r-pipeline-from-scratch-pipeline
     spec:
       containers:
         - env:
@@ -40,7 +40,7 @@ spec:
             periodSeconds: 10
             successThreshold: 1
             timeoutSeconds: 1
-          name: express-sample-app
+          name: sreevani-r-pipeline-from-scratch-pipeline
           ports:
             - containerPort: 3000
               name: http
