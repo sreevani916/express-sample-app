@@ -64,9 +64,9 @@ spec:
     - name: kustomize-build
       runAfter:
         - build-image
-      params:
-        - name: image-with-tag
-          value: "quay.io/sreevani/express-sample-app=$(params.image-repo):$(tasks.clone-repository.results.commit)"
+      # params:
+      #   - name: image-with-tag
+      #     value: "quay.io/sreevani/express-sample-app=$(params.image-repo):$(tasks.clone-repository.results.commit)"
       taskRef:
         kind: Task
         name: kustomize-build
