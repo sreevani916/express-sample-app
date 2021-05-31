@@ -10,6 +10,6 @@ spec:
     termination: edge
   to:
     kind: Service
-    name: sreevani-r-live-pfs
+    name: sreevani-r-pipeline-from-scratch
     weight: 100
   wildcardPolicy: None

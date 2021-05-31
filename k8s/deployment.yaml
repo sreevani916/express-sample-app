@@ -5,25 +5,25 @@ metadata:
     app.openshift.io/vcs-ref: f7580aa1eb6f7176705176e201ecff4de93edafb
     app.openshift.io/vcs-uri: https://github.com/upslopeio/express-sample-app
   labels:
-    app: sreevani-r-live-pfs
-    app.kubernetes.io/instance: sreevani-r-live-pfs
-    app.kubernetes.io/name: sreevani-r-live-pfs
+    app: sreevani-r-pipeline-from-scratch
+    app.kubernetes.io/instance: sreevani-r-pipeline-from-scratch
+    app.kubernetes.io/name: sreevani-r-pipeline-from-scratch
     app.openshift.io/runtime: js
-  name: sreevani-r-live-pfs
+  name: sreevani-r-pipeline-from-scratch
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app.kubernetes.io/instance: sreevani-r-live-pfs
-      app.kubernetes.io/name: sreevani-r-live-pfs
+      app.kubernetes.io/instance: sreevani-r-pipeline-from-scratch
+      app.kubernetes.io/name: sreevani-r-pipeline-from-scratch
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app.kubernetes.io/instance: sreevani-r-live-pfs
-        app.kubernetes.io/name: sreevani-r-live-pfs
+        app.kubernetes.io/instance: sreevani-r-pipeline-from-scratch
+        app.kubernetes.io/name: sreevani-r-pipeline-from-scratch
     spec:
       containers:
         - env:
@@ -42,7 +42,7 @@ spec:
             periodSeconds: 10
             successThreshold: 1
             timeoutSeconds: 1
-          name: sreevani-r-live-pfs
+          name: sreevani-r-pipeline-from-scratch
           ports:
             - containerPort: 3000
               name: http

@@ -2,10 +2,10 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: sreevani-r-live-pfs
-    app.kubernetes.io/instance: sreevani-r-live-pfs
-    app.kubernetes.io/name: sreevani-r-live-pfs
-  name: sreevani-r-live-pfs
+    app: sreevani-r-pipeline-from-scratch
+    app.kubernetes.io/instance: sreevani-r-pipeline-from-scratch
+    app.kubernetes.io/name: sreevani-r-pipeline-from-scratch
+  name: sreevani-r-pipeline-from-scratch
 spec:
   ports:
     - name: http
@@ -13,7 +13,7 @@ spec:
       protocol: TCP
       targetPort: 3000
   selector:
-    app.kubernetes.io/instance: sreevani-r-live-pfs
-    app.kubernetes.io/name: sreevani-r-live-pfs
+    app.kubernetes.io/instance: sreevani-r-pipeline-from-scratch
+    app.kubernetes.io/name: sreevani-r-pipeline-from-scratch
   sessionAffinity: None
   type: ClusterIP
