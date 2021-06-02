@@ -8,5 +8,10 @@ spec:
     name: sreevani-r-pipeline-from-scratch-pipeline
   workspaces:
     - name: pipeline-shared-data
-      persistentVolumeClaim:
-        claimName: sreevani-r-pvc
+      volumeClaimTemplate:
+        spec:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 1Gi
